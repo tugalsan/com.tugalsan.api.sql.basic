@@ -22,7 +22,7 @@ public class TS_SQLBasicUtils {
         return TS_SQLTblUtils.createIfNotExists(anchor, false, cfg.tableName, cfg.getColumnTypes());
     }
 
-    public static int del(TS_SQLConnAnchor anchor, TGS_SQLBasicConfig cfg, CharSequence tag) {
+    public static TS_SQLConnStmtUpdateResult del(TS_SQLConnAnchor anchor, TGS_SQLBasicConfig cfg, CharSequence tag) {
         return TS_SQLDeleteUtils.delete(anchor, cfg.tableName)
                 .whereConditionAnd(conditions -> conditions.strEq(cfg.colNameParam, tag));
     }
