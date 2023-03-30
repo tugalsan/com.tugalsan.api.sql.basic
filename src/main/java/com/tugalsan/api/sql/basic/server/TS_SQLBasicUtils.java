@@ -81,7 +81,7 @@ public class TS_SQLBasicUtils {
             }
             return Path.of(resultStrValue);
         }
-        var isWin = TS_OSUtils.isWindows();
+        var isWin = TS_OsPlatformUtils.isWindows();
         var defaultPathStr = isWin ? defaultPath.toString().replace("\\", "/") : defaultPath.toString();
         var resultStrValue = getStr(anchor, cfg, tag, defaultPathStr);
         if (resultStrValue == null) {
