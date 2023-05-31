@@ -5,7 +5,7 @@ import java.util.*;
 import com.tugalsan.api.list.client.*;
 import com.tugalsan.api.sql.basic.client.*;
 import com.tugalsan.api.os.server.*;
-import com.tugalsan.api.pack.client.*;
+import com.tugalsan.api.tuple.client.*;
 import com.tugalsan.api.sql.conn.server.*;
 import com.tugalsan.api.sql.delete.server.*;
 import com.tugalsan.api.sql.insert.server.*;
@@ -57,7 +57,7 @@ public class TS_SQLBasicUtils {
             return newValueStr;
         }
         TS_SQLUpdateUtils.update(anchor, cfg.tableName)
-                .set(set -> set.add(new TGS_Pack2(cfg.colNameValue, newValue)))
+                .set(set -> set.add(new TGS_Tuple2(cfg.colNameValue, newValue)))
                 .whereConditionAnd(conditions -> conditions.strEq(cfg.colNameParam, tag));
         return newValueStr;
     }

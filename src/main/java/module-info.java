@@ -3,7 +3,7 @@ module com.tugalsan.api.sql.basic {
     requires com.tugalsan.api.url;
     requires com.tugalsan.api.string;
     requires com.tugalsan.api.list;
-    requires com.tugalsan.api.pack;
+    requires com.tugalsan.api.tuple;
     requires com.tugalsan.api.sql.col.typed;
     requires com.tugalsan.api.os;
     requires com.tugalsan.api.sql.conn;
