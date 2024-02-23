@@ -18,7 +18,7 @@ import com.tugalsan.api.url.client.*;
 
 public class TS_SQLBasicUtils {
 
-    public static boolean createDefaultTableIfNotExists(TS_SQLConnAnchor anchor, TGS_SQLBasicConfig cfg) {
+    public static boolean createCommonTableIfNotExists(TS_SQLConnAnchor anchor, TGS_SQLBasicConfig cfg) {
         return TS_SQLTblUtils.createIfNotExists(anchor, false, cfg.tableName, cfg.getColumnTypes());
     }
 
