@@ -1,5 +1,5 @@
 module com.tugalsan.api.sql.basic {
-    requires com.tugalsan.api.runnable;
+    requires com.tugalsan.api.callable;
     requires com.tugalsan.api.url;
     requires com.tugalsan.api.string;
     requires com.tugalsan.api.list;
@@ -14,6 +14,6 @@ module com.tugalsan.api.sql.basic {
     requires com.tugalsan.api.sql.update;
     requires com.tugalsan.api.sql.delete;
     requires com.tugalsan.api.sql.where;
-  exports com.tugalsan.api.sql.basic.client;
-  exports com.tugalsan.api.sql.basic.server;
+    exports com.tugalsan.api.sql.basic.client;
+    exports com.tugalsan.api.sql.basic.server;
 }
