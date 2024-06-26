@@ -13,7 +13,7 @@ import com.tugalsan.api.sql.max.server.*;
 import com.tugalsan.api.sql.select.server.*;
 import com.tugalsan.api.sql.tbl.server.*;
 import com.tugalsan.api.sql.update.server.*;
-import com.tugalsan.api.string.server.*;
+import com.tugalsan.api.string.client.*;
 import com.tugalsan.api.url.client.*;
 
 public class TS_SQLBasicUtils {
@@ -32,7 +32,7 @@ public class TS_SQLBasicUtils {
         if (str == null) {
             return TGS_ListUtils.of();
         }
-        return TS_StringUtils.toList(str, "\n");
+        return TGS_StringUtils.jre().toList(str, "\n");
     }
 
     public static String getStr(TS_SQLConnAnchor anchor, TGS_SQLBasicConfig cfg, CharSequence tag, CharSequence defaultString) {
