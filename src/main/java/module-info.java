@@ -1,5 +1,5 @@
 module com.tugalsan.api.sql.basic {
-    requires com.tugalsan.api.callable;
+    requires com.tugalsan.api.function;
     requires com.tugalsan.api.url;
     requires com.tugalsan.api.string;
     requires com.tugalsan.api.list;
