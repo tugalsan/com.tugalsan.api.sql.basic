@@ -35,7 +35,7 @@ public class TS_SQLBasicUtils {
 
     public static String strList_delItm(TS_SQLConnAnchor anchor, TGS_SQLBasicConfig cfg, CharSequence tag, CharSequence... newValues) {
         var lst = strList_getLst(anchor, cfg, tag);
-        Arrays.stream(newValues).forEachOrdered(newValue -> lst.add(newValue.toString()));
+        Arrays.stream(newValues).forEachOrdered(newValue -> lst.remove(newValue.toString()));
         return strList_setLst(anchor, cfg, tag, lst);
     }
 
