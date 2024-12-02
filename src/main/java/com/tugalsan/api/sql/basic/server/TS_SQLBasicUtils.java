@@ -27,8 +27,24 @@ public class TS_SQLBasicUtils {
                 .whereConditionAnd(conditions -> conditions.strEq(cfg.colNameParam, tag));
     }
 
-    public static List<String> getStrList(TS_SQLConnAnchor anchor, TGS_SQLBasicConfig cfg, CharSequence tag, CharSequence defaultString) {
-        var str = getStr(anchor, cfg, tag, defaultString);
+    public static String strList_addItm(TS_SQLConnAnchor anchor, TGS_SQLBasicConfig cfg, CharSequence tag, CharSequence... newValues) {
+        var lst = strList_getLst(anchor, cfg, tag);
+        Arrays.stream(newValues).forEachOrdered(newValue -> lst.add(newValue.toString()));
+        return strList_setLst(anchor, cfg, tag, lst);
+    }
+
+    public static String strList_delItm(TS_SQLConnAnchor anchor, TGS_SQLBasicConfig cfg, CharSequence tag, CharSequence... newValues) {
+        var lst = strList_getLst(anchor, cfg, tag);
+        Arrays.stream(newValues).forEachOrdered(newValue -> lst.add(newValue.toString()));
+        return strList_setLst(anchor, cfg, tag, lst);
+    }
+
+    public static String strList_setLst(TS_SQLConnAnchor anchor, TGS_SQLBasicConfig cfg, CharSequence tag, List<String> newValues) {
+        return setStr(anchor, cfg, tag, TGS_StringUtils.cmn().toString(newValues, "\n"));
+    }
+
+    public static List<String> strList_getLst(TS_SQLConnAnchor anchor, TGS_SQLBasicConfig cfg, CharSequence tag) {
+        var str = getStr(anchor, cfg, tag, null);
         if (str == null) {
             return TGS_ListUtils.of();
         }
