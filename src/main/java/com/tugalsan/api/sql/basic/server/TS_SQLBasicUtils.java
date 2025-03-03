@@ -30,7 +30,7 @@ public class TS_SQLBasicUtils {
     public static String strList_addItm(TS_SQLConnAnchor anchor, TGS_SQLBasicConfig cfg, CharSequence tag, CharSequence... newValues) {
         var lst = strList_getLst(anchor, cfg, tag);
         Arrays.stream(newValues).forEach(newValue -> {
-            var present = lst.stream().filter(itm -> Objects.equals(itm, newValue)).findAny().isPresent();
+            var present = lst.stream().anyMatch(itm -> Objects.equals(itm, newValue));
             if (present) {
                 return;
             }
