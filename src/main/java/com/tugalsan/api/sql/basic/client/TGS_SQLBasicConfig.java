@@ -45,4 +45,45 @@ public class TGS_SQLBasicConfig {
                 new TGS_SQLColTyped(colNameValue)
         );
     }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 53 * hash + Objects.hashCode(this.tableName);
+        hash = 53 * hash + Objects.hashCode(this.colNameId);
+        hash = 53 * hash + Objects.hashCode(this.colNameParam);
+        hash = 53 * hash + Objects.hashCode(this.colNameValue);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final TGS_SQLBasicConfig other = (TGS_SQLBasicConfig) obj;
+        if (!Objects.equals(this.tableName, other.tableName)) {
+            return false;
+        }
+        if (!Objects.equals(this.colNameId, other.colNameId)) {
+            return false;
+        }
+        if (!Objects.equals(this.colNameParam, other.colNameParam)) {
+            return false;
+        }
+        return Objects.equals(this.colNameValue, other.colNameValue);
+    }
+
+    @Override
+    public String toString() {
+        return TGS_SQLBasicConfig.class.getSimpleName() + "{" + "tableName=" + tableName + ", colNameId=" + colNameId + ", colNameParam=" + colNameParam + ", colNameValue=" + colNameValue + '}';
+    }
+    
+    
 }
