@@ -40,9 +40,9 @@ public class TGS_SQLBasicConfig {
 
     public List<TGS_SQLColTyped> getColumnTypes() {
         return TGS_ListUtils.of(
-                new TGS_SQLColTyped(colNameId),
-                new TGS_SQLColTyped(colNameParam),
-                new TGS_SQLColTyped(colNameValue)
+                TGS_SQLColTyped.of(colNameId),
+                TGS_SQLColTyped.of(colNameParam),
+                TGS_SQLColTyped.of(colNameValue)
         );
     }
 
