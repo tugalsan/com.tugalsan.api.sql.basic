@@ -1,20 +1,20 @@
 package com.tugalsan.api.sql.basic.server;
 
+import module com.tugalsan.api.list;
+import module com.tugalsan.api.sql.basic;
+import module com.tugalsan.api.os;
+import module com.tugalsan.api.tuple;
+import module com.tugalsan.api.sql.conn;
+import module com.tugalsan.api.sql.delete;
+import module com.tugalsan.api.sql.insert;
+import module com.tugalsan.api.sql.max;
+import module com.tugalsan.api.sql.select;
+import module com.tugalsan.api.sql.tbl;
+import module com.tugalsan.api.sql.update;
+import module com.tugalsan.api.string;
+import module com.tugalsan.api.url;
 import java.nio.file.*;
 import java.util.*;
-import com.tugalsan.api.list.client.*;
-import com.tugalsan.api.sql.basic.client.*;
-import com.tugalsan.api.os.server.*;
-import com.tugalsan.api.tuple.client.*;
-import com.tugalsan.api.sql.conn.server.*;
-import com.tugalsan.api.sql.delete.server.*;
-import com.tugalsan.api.sql.insert.server.*;
-import com.tugalsan.api.sql.max.server.*;
-import com.tugalsan.api.sql.select.server.*;
-import com.tugalsan.api.sql.tbl.server.*;
-import com.tugalsan.api.sql.update.server.*;
-import com.tugalsan.api.string.client.*;
-import com.tugalsan.api.url.client.*;
 
 public class TS_SQLBasicUtils {
 
